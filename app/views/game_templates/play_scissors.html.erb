@@ -1,5 +1,13 @@
 <h1>Rock-Paper-Scissors</h1>
-<p>You chose: <%= @player_move %></p>
-<p>Computer chose: <%= @computer_move %></p>
+<p>We played <%= @player_move %>!</p>
+<p>They played <%= @computer_move %>!</p>
 <h2><%= @result %></h2>
 <%= link_to "Play Again", root_path, class: "btn btn-primary" %>
+
+<ul>
+  <li><%= link_to "Play Rock", "/rock" %></li>
+  <li><%= link_to "Play Paper", "/paper" %></li>
+  <li><%= link_to "Play Scissors", "/scissors" %></li>
+</ul>
+<%= link_to "Rules", root_path, class: "btn btn-secondary" %>
+<%= link_to "Back to Home", root_path, class: "btn btn-primary" %>

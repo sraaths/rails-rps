@@ -23,22 +23,21 @@ class ZebraController < ApplicationController
     render template: "game_templates/play_scissors"
   end
 
+  def index
+    render template: "game_templates/index"
+  end
+
   private
 
   def determine_result(player, computer)
     if player == computer
-      "It's a tie!"
+      "We tied!"
     elsif (player == "rock" && computer == "scissors") ||
           (player == "paper" && computer == "rock") ||
           (player == "scissors" && computer == "paper")
-      "You win!"
+      "We won!"
     else
-      "You lose!"
+      "We lost!"
     end
   end
 end
-
-def index
-  render template: "game_templates/index"
-end
-
